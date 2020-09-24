@@ -40,7 +40,8 @@ public class CoreManagerSet<T> implements CoreManager<T> {
         return collection.stream();
     }
 
-    @Override @NotNull
+    @Override
+    @NotNull
     public Iterator<T> iterator() {
         return collection.iterator();
     }

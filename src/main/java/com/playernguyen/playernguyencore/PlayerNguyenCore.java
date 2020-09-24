@@ -7,6 +7,7 @@ public final class PlayerNguyenCore extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        this.getLogger().info("PlayerNguyenCore initial");
     }
 
     @Override

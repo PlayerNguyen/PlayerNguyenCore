@@ -10,14 +10,16 @@ public interface ICoreEstablish {
 
     /**
      * Open the connect to SQL
+     *
      * @return the SQL connection class ({@link Connection})
      */
     Connection openConnection() throws SQLException;
 
     /**
      * Test connection of this establish.
-     * @return Whether can connect
+     *
      * @param stackTrace Print the stack trace
+     * @return Whether can connect
      */
     boolean testConnect(boolean stackTrace);
 

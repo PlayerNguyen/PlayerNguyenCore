@@ -15,19 +15,17 @@ public interface ICoreCommand {
     String getCommand();
 
     /**
-     *
      * @return The description of command
      */
     String getDescription();
 
     /**
-     *
      * @return The parameters of command
      */
     String getParameters();
 
     /**
-     * @param sender The sender execution tab executor
+     * @param sender    The sender execution tab executor
      * @param arguments The argument list
      * @return Tab executor listen to sender
      */
@@ -36,7 +34,7 @@ public interface ICoreCommand {
     /**
      * On execute the command
      *
-     * @param sender The sender to execute
+     * @param sender    The sender to execute
      * @param arguments The argument list
      * @return the status code to handle
      */

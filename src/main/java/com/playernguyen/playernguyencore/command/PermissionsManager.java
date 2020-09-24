@@ -7,6 +7,7 @@ public class PermissionsManager extends CoreManagerSet<String> {
 
     /**
      * Request the permission of {@link CommandSender}
+     *
      * @param sender The sender the request permissions
      * @return Whether having permission inside permission list
      */

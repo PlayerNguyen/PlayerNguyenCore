@@ -1,5 +1,5 @@
 # 🚀 About
-PlayerNguyenCore's not a Bukkit plugin, it is a library for a developer who lazy (like me) to easy build a Bukkit/Spigot/Paper plugin.
+PlayerNguyenCore's a Bukkit plugin and library for a developer who lazy (like me) to easy build a Bukkit/Spigot/Paper plugin.
 This library having a lot of objects that take your time.
 # 🚀 Feature
 These are a long list reason why you should use my library:

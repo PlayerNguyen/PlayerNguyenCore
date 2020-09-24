@@ -7,9 +7,10 @@ public class CoreUtils {
 
     /**
      * Check whether the {@link String} value can convert to {@link Integer}
+     *
      * @param string String value to check
      * @return true if the string value is an integer <br>
-     *     or false
+     * or false
      */
     public static boolean isIntFromString(String string) {
         try {
@@ -22,9 +23,10 @@ public class CoreUtils {
 
     /**
      * Check whether the {@link String} can convert to {@link Float}
+     *
      * @param string String value to check
      * @return true if the string value is an float <br>
-     *     or false
+     * or false
      */
     public static boolean isFloatFromString(String string) {
         try {

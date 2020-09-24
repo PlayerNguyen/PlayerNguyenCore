@@ -1,8 +1,10 @@
 package com.playernguyen.playernguyencore.config;
 
+import com.playernguyen.playernguyencore.utils.CorePreconditions;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,16 +15,21 @@ public class CoreConfig<T extends CoreConfigFlag> {
     private final File file;
     private final FileConfiguration fileConfiguration;
 
-    public CoreConfig(Plugin plugin, String name, CoreConfigFlag[] chunks, String parent) throws IOException {
+    public CoreConfig(@NotNull Plugin plugin,
+                      @NotNull String name,
+                      @NotNull CoreConfigFlag[] chunks,
+                      @NotNull String parent) throws IOException {
         // Create data folder when null
-        if (!plugin.getDataFolder().exists() && !plugin.getDataFolder().mkdir())
-            throw new IllegalStateException("Cannot initiate the data folder of plugin "
-                    + plugin.getDescription().getName());
+        CorePreconditions.state(
+                !plugin.getDataFolder().exists() && !plugin.getDataFolder().mkdir(),
+                "Cannot initiate the data folder of plugin " + plugin.getDescription().getName()
+        );
         // Create parent
         this.currentParent = new File(plugin.getDataFolder(), parent);
-        if (!currentParent.exists() && !currentParent.mkdir())
-            throw new IllegalStateException("Cannot initiate the data folder of plugin "
-                    + plugin.getDescription().getName());
+        CorePreconditions.state(
+                !currentParent.exists() && !currentParent.mkdir(),
+                "Cannot initiate the data folder of plugin " + plugin.getDescription().getName()
+        );
         // File load
         this.file = new File(currentParent, name);
         this.fileConfiguration = YamlConfiguration.loadConfiguration(this.file);
@@ -31,7 +38,7 @@ public class CoreConfig<T extends CoreConfigFlag> {
             this.fileConfiguration.set(chunk.getPath(), chunk.getDefault());
         }
         // Save loaded
-        save();
+        this.save();
     }
 
     protected File getCurrentParent() {
@@ -46,7 +53,23 @@ public class CoreConfig<T extends CoreConfigFlag> {
         return fileConfiguration;
     }
 
-    protected void save () throws IOException {
+    protected void save() throws IOException {
         this.fileConfiguration.save(this.file);
+    }
+
+    public Object getObject(@NotNull T flag) {
+        return this.fileConfiguration.get(flag.getPath());
+    }
+
+    public String getString(@NotNull T flag) {
+        return this.fileConfiguration.getString(flag.getPath());
+    }
+
+    public int getInt(@NotNull T flag) {
+        return this.fileConfiguration.getInt(flag.getPath());
+    }
+
+    public double getDouble(@NotNull T flag) {
+        return this.fileConfiguration.getDouble(flag.getPath());
     }
 }
