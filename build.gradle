@@ -23,6 +23,10 @@ repositories {
 dependencies {
     implementation 'org.jetbrains:annotations:19.0.0'
     compileOnly 'com.destroystokyo.paper:paper-api:1.12-R0.1-SNAPSHOT'
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
+
 }
 
 //processResources {
