@@ -1,5 +1,5 @@
 [![](https://jitpack.io/v/PlayerNguyen/PlayerNguyenCore.svg)](https://jitpack.io/#PlayerNguyen/PlayerNguyenCore)
-# 🚀 About
+# ℹ️ About
 PlayerNguyenCore's a Bukkit plugin and library for a developer who lazy (like me) to easy build a Bukkit/Spigot/Paper plugin.
 This library having a lot of objects that take your time.
 # 🚀 Feature
