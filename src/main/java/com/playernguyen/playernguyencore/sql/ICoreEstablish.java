@@ -12,6 +12,7 @@ public interface ICoreEstablish {
      * Open the connect to SQL
      *
      * @return the SQL connection class ({@link Connection})
+     * @throws SQLException When the SQL cannot connect by errors
      */
     Connection openConnection() throws SQLException;
 
