@@ -71,17 +71,4 @@ public class CoreEstablishMySQL implements ICoreEstablish {
                 this.username, this.password
         );
     }
-
-    @Override
-    public boolean testConnect(boolean stackTrace) {
-        // Create dummy connection
-        try (Connection connection = this.openConnection()) {
-            connection.close(); // <--- Then close the dummy connection
-            return true;
-        } catch (SQLException e) {
-            if (stackTrace)
-                e.printStackTrace();
-            return false;
-        }
-    }
 }
