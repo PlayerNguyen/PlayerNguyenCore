@@ -33,9 +33,11 @@ public class CoreConfig<T extends CoreConfigFlag> {
         // File load
         this.file = new File(currentParent, name);
         this.fileConfiguration = YamlConfiguration.loadConfiguration(this.file);
-        // Load chunks
+        // Load default chunks
         for (CoreConfigFlag chunk : chunks) {
-            this.fileConfiguration.set(chunk.getPath(), chunk.getDefault());
+            if (!this.fileConfiguration.contains(chunk.getPath())) {
+                this.fileConfiguration.set(chunk.getPath(), chunk.getDefault());
+            }
         }
         // Save loaded
         this.save();
