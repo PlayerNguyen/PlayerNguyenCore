@@ -12,4 +12,5 @@ These are a long list reason why you should use my library:
 * More and more things ! 
 
 # 📖 Let's start
-Check out for Wiki [here](https://github.com/PlayerNguyen/PlayerNguyenCore/wiki) for installation and more...
+- Check out for Wiki [here](https://github.com/PlayerNguyen/PlayerNguyenCore/wiki) for installation and more...
+- Documentations for [latest version](https://playernguyen.github.io/PlayerNguyenCore/javadoc/latest)
