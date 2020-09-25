@@ -1,5 +1,0 @@
-name: PlayerNguyenCore
-version: @version@
-main: com.playernguyen.playernguyencore.PlayerNguyenCore
-authors: [ Player_Nguyen ]
-description: Player Nguyen Core for lazy work

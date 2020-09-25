@@ -1,4 +1,4 @@
-package com.playernguyen.playernguyencore.command;
+package com.playernguyen.playernguyencore.permision;
 
 import com.playernguyen.playernguyencore.manager.CoreManagerSet;
 import org.bukkit.command.CommandSender;

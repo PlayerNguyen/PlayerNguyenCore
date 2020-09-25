@@ -1,5 +1,7 @@
 package com.playernguyen.playernguyencore.command;
 
+import com.playernguyen.playernguyencore.permision.PermissionsManager;
+
 public abstract class CoreCommandSubCommand implements ICoreCommand {
 
     private final String command;
