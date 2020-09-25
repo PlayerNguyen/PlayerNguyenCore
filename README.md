@@ -11,6 +11,5 @@ These are a long list reason why you should use my library:
 * Easy to use ~ learn in 5 minutes
 * More and more things ! 
 
-# 📖 Docs & Wiki
-Check out for Wiki [here](https://github.com/PlayerNguyen/PlayerNguyenCore/wiki).
-
+# 📖 Let's start
+Check out for Wiki [here](https://github.com/PlayerNguyen/PlayerNguyenCore/wiki) for installation and more...
